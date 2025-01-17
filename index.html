@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSPlay | Quick JS Lab</title>
+    <script src="https://unpkg.com/monaco-editor@latest/min/vs/loader.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="col">
+      <div class="mac-window">
+        <div class="mac-title-bar">
+          <div>
+            <span class="mac-button red"></span>
+            <span class="mac-button yellow"></span>
+            <span class="mac-button green"></span>
+            <span>Code</span>
+          </div>
+          <div class="controls">
+            <button class="btn-success" id="run-btn">Run</button>
+
+            <button class="btn-warning" id="add-package-btn">Import</button>
+            <input id="package-input" type="text" placeholder="Package name" />
+          </div>
+        </div>
+
+        <div id="container"> </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="mac-window">
+        <div class="mac-title-bar">
+          <div>
+            <span class="mac-button red"></span>
+            <span class="mac-button yellow"></span>
+            <span class="mac-button green"></span>
+            <span>Logs</span>
+          </div>
+        </div>
+        <div id="output"></div>
+      </div>
+      <div class="mac-window">
+        <div class="mac-title-bar">
+          <div>
+            <span class="mac-button red"></span>
+            <span class="mac-button yellow"></span>
+            <span class="mac-button green"></span>
+            <span>Canvas</span>
+          </div>
+        </div>
+
+        <canvas id="visualization"></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

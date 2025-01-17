@@ -1,0 +1,143 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+* {
+  font-family: Consolas, monospace;
+  box-sizing: border-box;
+}
+
+#container {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  gap: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding: 5px;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  height: 100%;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.btn-success {
+  background-color: #28c940;
+}
+
+.btn-success:hover {
+  background-color: #64e878;
+}
+
+.btn-warning {
+  background-color: #ffbd2e;
+}
+
+.btn-success:hover {
+  background-color: #eba714;
+}
+
+input {
+  padding: 5px;
+  border: none;
+}
+
+.vis {
+  background-color: rgb(241, 241, 241);
+}
+
+.logs {
+  background-color: #1e1e1e;
+  color: white;
+}
+#output {
+  height: 100%;
+  overflow: scroll;
+  max-height: 390px;
+}
+.out {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+p {
+  margin: 0;
+  font-size: 14px;
+}
+
+#visualization {
+  height: 100%;
+  width: 100%;
+}
+
+/* Main window container */
+.mac-window {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f9f9f9;
+  flex: 1;
+}
+
+/* Title bar */
+.mac-title-bar {
+  background-color: #e0e0e0;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+}
+
+/* MacOS buttons */
+.mac-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.mac-button.red {
+  background-color: #ff5f57;
+  margin-left: 10px;
+}
+
+.mac-button.yellow {
+  background-color: #ffbd2e;
+}
+
+.mac-button.green {
+  background-color: #28c940;
+}
+
+/* Add hover effect for buttons */
+.mac-button:hover {
+  opacity: 0.8;
+}
+
+/* Content area */
+.mac-content {
+  padding: 15px;
+}
