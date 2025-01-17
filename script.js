@@ -25,42 +25,7 @@ let proxy = URL.createObjectURL(
 
 require(["vs/editor/editor.main"], function () {
   let editor = monaco.editor.create(document.getElementById("container"), {
-    value: `
-//You can log
-console.log("Hello there!")
-
-// And you can draw! You can access to "canvas" by default.
-const ctx = canvas.getContext('2d');
-// Set canvas size to fill the screen or parent dynamically
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
-
-// Draw a triangle
-ctx.beginPath();
-ctx.moveTo(centerX, centerY - 100); // Top point
-ctx.lineTo(centerX - 100, centerY + 100); // Bottom-left point
-ctx.lineTo(centerX + 100, centerY + 100); // Bottom-right point
-ctx.closePath();
-ctx.fillStyle = 'lightblue';
-ctx.fill();
-ctx.strokeStyle = 'blue';
-ctx.stroke();
-
-// Draw an emoji inside the triangle
-ctx.font = '20px serif';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
-ctx.fillText('😊', centerX, centerY);
-
-
-/**
- * You can also import js packages below! Just enter package name and click
- * "Import"
- */
-    `,
+    value: DEFAULT_VALUE,
     language: "javascript",
     theme: "vs-dark",
     automaticLayout: true,
@@ -87,7 +52,7 @@ document.getElementById("add-package-btn").addEventListener("click", () => {
   const pkg = document.getElementById("package-input").value;
   if (pkg) {
     const script = document.createElement("script");
-    script.src = `https://cdn.jsdelivr.net/npm/${pkg}`;
+    script.src = `${pkg}`;
     script.onload = () => console.log(`Loaded package: ${pkg}`);
     script.onerror = () => error(`Failed to load package: ${pkg}`);
     document.head.appendChild(script);
